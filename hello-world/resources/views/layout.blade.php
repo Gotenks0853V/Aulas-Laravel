@@ -12,6 +12,8 @@
     <hr>
     <main> @yield('content')</main>
     <hr>
-    <footer> Rodapé </footer>
+    <footer> 
+        @includeWhen($mostrarRodape ?? false, 'footer') 
+    </footer>
 </body>
 </html>
