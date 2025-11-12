@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+        @yield('titulo', 'Meu Site!!')
+    </title>
 </head>
 <body>
     <header> <a href="{{ Route('home_page') }}"> Home </a> | <a href="/services"> Serviços </a> | <a href="{{ Route('contact_page') }}"> Entre em contato </a> </header>
