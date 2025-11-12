@@ -1,13 +1,8 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('hello-world');
-});
-
-Route::get('/hello/{name}', function ($name) {
-    
-    $data = ['name' => $name];
-    return view('hello', $data);
-});
+// Nomear Rotas
+Route::get('/', [SiteController::class, 'home'])->name('home_page');
+Route::get('/services', [SiteController::class, 'services'])->name('services_page');
+Route::get('/contact', [SiteController::class, 'contact'])->name('contact_page');
