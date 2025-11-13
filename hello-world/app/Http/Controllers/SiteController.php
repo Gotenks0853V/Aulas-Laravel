@@ -9,7 +9,9 @@ class SiteController extends Controller
     public function home()
     {
         $mostrarRodape = true;
-        return view('home', ['mostrarRodape' => $mostrarRodape]);
+
+        $userType = 'admin';
+        return view('home', ['mostrarRodape' => $mostrarRodape, 'userType' => $userType]);
     }
 
     public function services() 
@@ -23,9 +25,7 @@ class SiteController extends Controller
             ['name' => 'Serviço 04', 'description' => 'Descrição do serviço 04'],
         ];
 
-        $repeticoes = 3;
-
-        return view('services', ['titulo' => $titulo, 'services' => $services, 'repeticoes' => $repeticoes]);
+        return view('services', ['titulo' => $titulo, 'services' => $services]);
     }
 
     public function contact() 
