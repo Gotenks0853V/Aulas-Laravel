@@ -14,4 +14,7 @@
     @endif
 
 </h1>
+
+<h1> Numero sem formatar: 1000 </h1>
+<h2> Numero formatado: @moeda(1000) </h2>
 @endsection
